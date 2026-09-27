@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Page-specific compositions (mobile first)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Home hero — copy on ivory, a 16:9 video window
+   -------------------------------------------------------------------------- */
+.hero { position: relative; overflow: clip; padding-block: var(--space-6) var(--section-space); }
+.hero .deco-sun { top: -6%; right: -14%; z-index: 0; }
+.hero .deco-branch { display: none; top: 0; right: 0; z-index: 1; --branch-size: min(46vw, 22rem); }
+.hero__grid { position: relative; z-index: 2; display: grid; gap: var(--space-7); }
+.hero__copy { position: relative; }
+.hero__title {
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-hero);
+  line-height: var(--lh-display);
+  letter-spacing: -0.015em;
+}
+.hero__title .hero__place {
+  display: block;
+  margin-top: var(--space-3);
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 0.72rem + 0.5vw, 1.05rem);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-terracotta-text);
+}
+.hero__lead { max-width: 30rem; margin-bottom: var(--space-6); }
+.hero__media { position: relative; }
+.hero .vertical-mark { display: none; }
+
+/* --------------------------------------------------------------------------
+   Inner pages hero
+   -------------------------------------------------------------------------- */
+.page-hero { position: relative; overflow: clip; padding-block: var(--space-6) var(--section-space); }
+.page-hero .deco-sun { top: -18%; right: -22%; --sun-size: min(70vw, 30rem); }
+.page-hero .deco-branch { display: none; top: 0; right: 0; --branch-size: min(38vw, 16rem); opacity: 0.85; }
+.page-hero__inner { position: relative; z-index: 2; display: grid; gap: var(--space-7); }
+.page-hero__title { margin-bottom: var(--space-4); font-size: var(--fs-h1); }
+.page-hero__lead { max-width: 34rem; }
+.page-hero .vertical-mark { display: none; }
+.page-hero--plain .page-hero__inner { gap: var(--space-4); }
+.page-hero--emblem .deco { display: none; }
+.page-hero__media { width: 100%; max-width: 34rem; }
+.page-hero__media--portrait { max-width: 22rem; }
+
+/* --------------------------------------------------------------------------
+   "Il Dojo" feature (home): one contained photo + text, image beside the copy
+   -------------------------------------------------------------------------- */
+.feature { display: grid; gap: var(--space-6); }
+.feature__media { width: 100%; max-width: 22rem; margin-inline: auto; }
+.feature__media .media { aspect-ratio: 4 / 3; }
+.feature__body h2 { margin-bottom: var(--space-4); }
+.feature__body p { max-width: 34rem; }
+
+/* --------------------------------------------------------------------------
+   Course page: emblem panel + one centred reading column, galleries at full width
+   -------------------------------------------------------------------------- */
+.course-body { display: grid; gap: var(--space-6); }          /* safeguarding: side title + main column */
+.side-title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-terracotta-text);
+}
+.course-text .prose { margin-inline: auto; }
+.course-text .prose,
+.course-text .lead-p {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.course-text .lead-p {
+  max-width: none;
+  margin-bottom: 1.2em;
+  padding-left: 0;
+  border-left: 0;
+  color: inherit;
+}
+.subject + .subject { margin-top: var(--space-8); }
+.subject__title { font-size: var(--fs-h3); margin-bottom: var(--space-3); }
+.subject .pgrid { margin-top: var(--space-6); }
+.quote-block {
+  position: relative;
+  margin: var(--space-7) 0 0;
+  padding: var(--space-6) 0 0 0;
+  max-width: 40rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 1.05rem + 0.9vw, 1.7rem);
+  line-height: 1.5;
+}
+.quote-block::before { content: ""; position: absolute; top: 0; left: 0; width: 3rem; height: 2px; background: var(--color-brand-terracotta); }
+
+.emblem {
+  --emblem-bg: var(--color-bg-soft);
+  --motif-fill: var(--emblem-bg);
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+  background: var(--emblem-bg);
+  border-radius: var(--radius-medium);
+}
+.emblem--clay { --emblem-bg: var(--color-clay-soft); }
+.emblem--sage { --emblem-bg: var(--color-sage-soft); }
+.emblem::after { content: ""; position: absolute; inset: 0.9rem; border: 1px solid var(--color-border-strong); border-radius: calc(var(--radius-medium) - 0.5rem); pointer-events: none; }
+.emblem__kanji {
+  writing-mode: vertical-rl;
+  font-family: var(--font-kanji);
+  font-size: clamp(4.5rem, 3.4rem + 3.4vw, 7rem);
+  line-height: 1.14;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-green);
+  opacity: 0.88;
+  user-select: none;
+}
+.emblem__motif { width: 58%; height: auto; stroke: var(--color-ink-green); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+
+/* --------------------------------------------------------------------------
+   Blog index + article
+   -------------------------------------------------------------------------- */
+.post-list { max-width: 62rem; list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border); }
+.post-list__item { margin: 0; border-bottom: 1px solid var(--color-border); }
+.post-list__link {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.post-list__thumb { max-width: 12rem; }
+.post-list__title { margin: 0 0 var(--space-2); font-size: clamp(1.4rem, 1.1rem + 1.1vw, 2rem); line-height: 1.22; transition: color var(--dur-1) var(--ease); }
+.post-list__link:hover .post-list__title { color: var(--color-terracotta-text); }
+.post-list__excerpt { margin: var(--space-2) 0 0; color: var(--color-text-muted); max-width: 40rem; }
+
+.article-head { padding-block: var(--space-6) var(--space-7); }
+.article-head__inner { max-width: 52rem; }
+.article-title { font-size: clamp(2.2rem, 1.5rem + 3vw, 4rem); margin-bottom: var(--space-4); }
+.article-cover { margin-top: var(--space-6); }
+.article-cover .media { aspect-ratio: 16 / 9; }
+.article-body { padding-bottom: var(--space-7); }
+.article-body .prose { margin-inline: auto; font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); line-height: 1.8; }
+.article-body .prose figure { margin: 2.2em 0; }
+.article-body .prose figure .media { border-radius: var(--radius-small); }
+.article-body .prose figure img { height: auto; }
+.article-foot { max-width: var(--container-text); margin-inline: auto; }
+.article-foot h2 { font-size: var(--fs-h3); }
+
+/* --------------------------------------------------------------------------
+   Contatti
+   -------------------------------------------------------------------------- */
+.contact-grid { display: grid; gap: var(--space-8); }
+.contact-card { padding: clamp(1.5rem, 1rem + 2.5vw, 3rem); background: var(--color-bg-paper); border: 1px solid var(--color-border); border-radius: var(--radius-small); box-shadow: 6px 6px 0 var(--color-clay); }
+.contact-card address { font-style: normal; margin-bottom: var(--space-5); font-size: var(--fs-lead); line-height: 1.5; }
+.contact-card__label { margin: var(--space-5) 0 var(--space-1); font-size: var(--fs-h4); }
+.contact-card p { margin-bottom: var(--space-3); }
+.contact-card .btn-row { margin-top: var(--space-6); }
+.directions { position: relative; overflow: hidden; isolation: isolate; display: grid; place-items: center; min-height: 15rem; padding: var(--space-6); text-align: center; border-radius: var(--radius-small); background: var(--color-sage-soft); }
+.directions::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("../images/ui/waves-pattern.svg") repeat center / 22rem auto; opacity: 0.35; }
+.directions p { margin-bottom: var(--space-4); }
+
+/* --------------------------------------------------------------------------
+   404
+   -------------------------------------------------------------------------- */
+.notfound { position: relative; overflow: clip; padding-block: clamp(4rem, 3rem + 8vw, 9rem); text-align: center; }
+.notfound .deco-enso { top: 50%; left: 50%; transform: translate(-50%, -50%); --enso-size: min(90vw, 34rem); opacity: 0.7; z-index: 0; }
+.notfound__inner { position: relative; z-index: 1; }
+.notfound h1 { max-width: 16ch; margin-inline: auto; }
+.notfound .btn-row { justify-content: center; }
+
+/* --------------------------------------------------------------------------
+   Dojo page banner + gallery pages
+   -------------------------------------------------------------------------- */
+.media--banner { aspect-ratio: 16 / 10; }

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Pranavia Dojo — design tokens  ("Rituale Silenzioso", Concept 03)
+   Brand colours are sampled from the original logo (#24B094 / #B84830).
+   Turquoise and terracotta are ACCENTS: most of the site lives on ivory/paper.
+   ========================================================================== */
+:root {
+  /* --- colour: brand ----------------------------------------------------- */
+  --color-brand-teal: #24b094;             /* logo turquoise — graphics, large shapes */
+  --color-brand-teal-deep: #10705f;        /* text/links/bands on ivory and paper (AA >= 5:1) */
+  --color-brand-teal-ink: #0b5648;         /* hover */
+  --color-brand-terracotta: #b84830;       /* logo terracotta — shapes, panel, buttons */
+  --color-terracotta-text: #aa4230;        /* terracotta for TEXT on ivory/paper (AA >= 5:1) */
+  --color-brand-terracotta-deep: #973520;  /* hover */
+
+  /* --- colour: surfaces -------------------------------------------------- */
+  --color-bg: #f9f5ed;                     /* avorio caldo */
+  --color-bg-soft: #f2ebdd;                /* carta, un tono più scura */
+  --color-bg-paper: #fffcf6;               /* bianco caldo */
+  --color-clay: #e7cfc4;                   /* argilla rosata */
+  --color-clay-soft: #f1e2d9;
+  --color-sage: #a7b0a3;                   /* verde salvia */
+  --color-sage-soft: #dfe3d9;
+  --color-ink-green: #33423d;              /* primary buttons */
+
+  /* --- colour: text ------------------------------------------------------ */
+  --color-text: #2b2f2c;                   /* carbone, non nero assoluto */
+  --color-text-muted: #5a605b;
+  --color-text-on-dark: #f9f5ed;
+  --color-border: #ddd2c0;
+  --color-border-strong: #c4b7a0;
+  --color-focus: #10705f;
+
+  /* --- typography -------------------------------------------------------- */
+  --font-display: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-kanji: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+
+  --fs-hero: clamp(3rem, 2.1rem + 4.6vw, 6.25rem);
+  --fs-h1: clamp(2.6rem, 1.7rem + 3.4vw, 5rem);
+  --fs-h2: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
+  --fs-h3: clamp(1.4rem, 1.15rem + 1vw, 2rem);
+  --fs-h4: clamp(1.15rem, 1.05rem + 0.4vw, 1.35rem);
+  --fs-lead: clamp(1.125rem, 1.04rem + 0.4vw, 1.375rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --fs-label: 0.75rem;                     /* uppercase, letter-spaced */
+
+  --lh-display: 1.04;
+  --lh-heading: 1.16;
+  --lh-body: 1.72;
+  --tracking-label: 0.16em;
+
+  /* --- spacing (4px rhythm) --------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-space: clamp(4rem, 2.4rem + 6vw, 8rem);
+  --gutter: clamp(1.25rem, 0.6rem + 3.2vw, 3rem);
+
+  /* --- layout ------------------------------------------------------------ */
+  --container: 75rem;                      /* 1200px */
+  --container-wide: 82.5rem;               /* 1320px */
+  --container-text: 42rem;                 /* reading column */
+  --header-h: 4rem;
+
+  /* --- shape / depth ----------------------------------------------------- */
+  --radius-small: 4px;
+  --radius-medium: 14px;
+  --radius-large: 28px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 14px 34px -18px rgba(43, 47, 44, 0.28);
+  --shadow-header: 0 1px 0 var(--color-border), 0 10px 26px -20px rgba(43, 47, 44, 0.35);
+
+  /* --- motion ------------------------------------------------------------ */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-1: 180ms;
+  --dur-2: 320ms;
+  --dur-3: 520ms;
+
+  /* --- paper grain (inline SVG, ~0 KB requests) -------------------------- */
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .30 0 0 0 0 .22 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 64em) {
+  :root { --header-h: 5rem; }
+}
