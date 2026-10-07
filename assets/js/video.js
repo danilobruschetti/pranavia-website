@@ -1,4 +1,4 @@
-/* Pranavia Dojo — video.js
+/* Pranavia — video.js
    Home hero window.
    1. A muted preview loop starts by itself a couple of seconds after the page has finished loading (never with prefers-reduced-motion, Save-Data
       or a slow connection; it pauses off-screen and in a hidden tab; a Pause button is always offered — WCAG 2.2.2).

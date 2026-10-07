@@ -1,4 +1,4 @@
-/* Pranavia Dojo — avviso privacy/cookie informativo.
+/* Pranavia — avviso privacy/cookie informativo.
    Registra soltanto la presa visione nel browser; non abilita servizi o tracciamenti. */
 (function () {
   'use strict';

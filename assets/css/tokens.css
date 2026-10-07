@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Pranavia Dojo — design tokens  ("Rituale Silenzioso", Concept 03)
+   Pranavia — design tokens  ("Rituale Silenzioso", Concept 03)
    Brand colours are sampled from the original logo (#24B094 / #B84830).
    Turquoise and terracotta are ACCENTS: most of the site lives on ivory/paper.
    ========================================================================== */
@@ -21,6 +21,18 @@
   --color-sage: #a7b0a3;                   /* verde salvia */
   --color-sage-soft: #dfe3d9;
   --color-ink-green: #33423d;              /* primary buttons */
+  --color-sage-ink: #4f5b4b;               /* sage for TEXT on ivory / sage-soft (AA >= 5:1) */
+
+  /* --- colour: places (v012) ---------------------------------------------
+     PRANAVIA is the master brand (teal, from the logo). Inside it live two places:
+     the Dojo (main hall, martial arts) = terracotta, the Centro (two rooms, Yoga/Pilates) = sage.
+     Use these, not the raw palette, whenever a colour has to say "which place". */
+  --place-dojo: var(--color-brand-terracotta);
+  --place-dojo-text: var(--color-terracotta-text);
+  --place-dojo-soft: var(--color-clay-soft);
+  --place-centro: var(--color-sage);
+  --place-centro-text: var(--color-sage-ink);
+  --place-centro-soft: var(--color-sage-soft);
 
   /* --- colour: text ------------------------------------------------------ */
   --color-text: #2b2f2c;                   /* carbone, non nero assoluto */

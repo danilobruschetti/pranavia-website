@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Etichetta e Tradizioni nel Dojo - Pranavia Dojo</title>
+<title>Etichetta e Tradizioni nel Dojo - Pranavia</title>
 <meta name="description" content="Nel dojo, l’etichetta è essenziale: rappresenta rispetto, disciplina e umiltà. Ogni praticante deve seguire precise regole, a partire dal rei (inchino) all’ingresso, simbolo di gratitudine verso il luogo e i compagni.">
 <link rel="canonical" href="https://pranaviadojo.com/etichetta-e-tradizioni-nel-dojo/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#F9F5ED">
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="Pranavia Dojo">
-<meta property="og:title" content="Etichetta e Tradizioni nel Dojo - Pranavia Dojo">
+<meta property="og:site_name" content="Pranavia">
+<meta property="og:title" content="Etichetta e Tradizioni nel Dojo - Pranavia">
 <meta property="og:description" content="Nel dojo, l’etichetta è essenziale: rappresenta rispetto, disciplina e umiltà. Ogni praticante deve seguire precise regole, a partire dal rei (inchino) all’ingresso, simbolo di gratitudine verso il luogo e i compagni.">
 <meta property="og:url" content="https://pranaviadojo.com/etichetta-e-tradizioni-nel-dojo/">
 <meta property="og:image" content="https://pranaviadojo.com/assets/images/og/etichetta-e-tradizioni-nel-dojo.jpg">
@@ -22,7 +22,7 @@
 <meta property="article:published_time" content="2025-02-21T10:00:10+00:00">
 <meta property="article:modified_time" content="2025-02-16T12:27:45+00:00">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Etichetta e Tradizioni nel Dojo - Pranavia Dojo">
+<meta name="twitter:title" content="Etichetta e Tradizioni nel Dojo - Pranavia">
 <meta name="twitter:description" content="Nel dojo, l’etichetta è essenziale: rappresenta rispetto, disciplina e umiltà. Ogni praticante deve seguire precise regole, a partire dal rei (inchino) all’ingresso, simbolo di gratitudine verso il luogo e i compagni.">
 <meta name="twitter:image" content="https://pranaviadojo.com/assets/images/og/etichetta-e-tradizioni-nel-dojo.jpg">
 
@@ -48,32 +48,42 @@
 <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 <header class="site-header" data-header>
   <div class="site-header__inner container--wide">
-    <a class="brand" href="../"><img src="../assets/images/brand/logo-pranavia-horizontal.png" width="786" height="252" alt="Pranavia Dojo — vai alla home"></a>
+    <a class="brand" href="../"><img src="../assets/images/brand/logo-pranavia-horizontal.png" width="786" height="252" alt="Pranavia — vai alla home"></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
       <span data-nav-label>Menu</span>
       <span class="nav-toggle__bars" aria-hidden="true"></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Principale" data-nav>
       <ul class="site-nav__list">
-        <li><a href="../">Home</a></li>
-        <li><a href="../dojo/">Il Dojo</a></li>
-        <li data-sub>
-          <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-discipline" data-sub-toggle>
-            <span>Corsi</span><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
-          </button>
-          <ul class="site-nav__sub" id="nav-discipline">
+        <li class="site-nav__group site-nav__group--dojo" data-sub>
+          <div class="site-nav__group-head">
+            <a class="site-nav__place" href="../dojo/"><span class="site-nav__label"><span class="site-nav__name">Dojo</span><span class="site-nav__hint">Arti marziali</span></span></a>
+            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-dojo" aria-label="Mostra le discipline del Dojo" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+          </div>
+          <ul class="site-nav__sub" id="nav-dojo">
+            <li class="site-nav__sub-intro"><a href="../dojo/">Il Dojo <span>La sala principale</span></a></li>
             <li><a href="../aikido/">Aikido</a></li>
             <li><a href="../karate/">Karate</a></li>
             <li><a href="../judo/">Judo</a></li>
-            <li><a href="../pilates/">Pilates</a></li>
-            <li><a href="../yoga/">Yoga</a></li>
             <li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>
+          </ul>
+        </li>
+        <li class="site-nav__group site-nav__group--centro" data-sub>
+          <div class="site-nav__group-head">
+            <a class="site-nav__place" href="../centro/"><span class="site-nav__label"><span class="site-nav__name">Centro</span><span class="site-nav__hint">Yoga · Pilates</span></span></a>
+            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-centro" aria-label="Mostra le discipline del Centro" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+          </div>
+          <ul class="site-nav__sub" id="nav-centro">
+            <li class="site-nav__sub-intro"><a href="../centro/">Il Centro <span>Le altre due sale</span></a></li>
+            <li><a href="../yoga/">Yoga</a></li>
+            <li><a href="../pilates/">Pilates</a></li>
           </ul>
         </li>
         <li><a href="../spazi/">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
       </ul>
-      <a class="btn btn--primary site-nav__cta" href="../contatti/">Iscriviti</a>
+      <a class="btn btn--primary site-nav__cta" href="../contatti/">Lezione di prova</a>
+      <p class="site-nav__contact"><a href="tel:+393517338222"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>+39 351 733 8222</a><a href="https://api.whatsapp.com/send?phone=393517338222" target="_blank" rel="noopener noreferrer"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-message"></use></svg>WhatsApp<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
     </nav>
   </div>
 </header><main id="contenuto" tabindex="-1">
@@ -158,27 +168,31 @@ Seguire queste tradizioni con consapevolezza significa onorare la storia e i val
     <div class="site-footer__brand">
       <div class="site-footer__identity">
         <img src="../assets/images/brand/logo-mark.png" width="305" height="356" alt="" loading="lazy" decoding="async">
-        <p><strong class="site-footer__brand-name">Pranavia Dojo</strong><span class="site-footer__association">Associazione Sportiva Dilettantistica Pranavia ASD</span></p>
+        <p><strong class="site-footer__brand-name">Pranavia</strong><span class="site-footer__association">Associazione Sportiva Dilettantistica Pranavia ASD</span></p>
       </div>
       <address class="site-footer__contact">
-        <span>Via Monte D’Onorio, 7 <span aria-hidden="true">·</span> 00178 Roma</span>
+        <span>Via Monte D’Onorio, 7 <span aria-hidden="true">·</span> 00178 Roma <span aria-hidden="true">·</span> Tor Fiscale</span>
         <span class="site-footer__contact-links"><a href="tel:+393517338222">+39 351 733 8222</a><a href="mailto:info@pranaviadojo.com">info@pranaviadojo.com</a></span>
       </address>
       <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Monte%20D%27Onorio%2C%207%2C%2000178%20Roma%20RM%2C%20Italia" target="_blank" rel="noopener noreferrer">Indicazioni <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg><span class="visually-hidden"> (Google Maps, nuova scheda)</span></a>
     </div>
-    <nav aria-labelledby="footer-discipline">
-      <h2 class="site-footer__title" id="footer-discipline">Corsi</h2>
-      <ul class="site-footer__list">
-<li><a href="../aikido/">Aikido</a></li><li><a href="../karate/">Karate</a></li><li><a href="../judo/">Judo</a></li><li><a href="../pilates/">Pilates</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>      </ul>
-    </nav>
     <nav aria-labelledby="footer-dojo">
-      <h2 class="site-footer__title" id="footer-dojo">Il Dojo</h2>
+      <h2 class="site-footer__title site-footer__title--dojo" id="footer-dojo">Dojo</h2>
       <ul class="site-footer__list">
-        <li><a href="../dojo/">Il Dojo</a></li>
+<li><a href="../dojo/">Il Dojo</a></li><li><a href="../aikido/">Aikido</a></li><li><a href="../karate/">Karate</a></li><li><a href="../judo/">Judo</a></li><li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>      </ul>
+    </nav>
+    <nav aria-labelledby="footer-centro">
+      <h2 class="site-footer__title site-footer__title--centro" id="footer-centro">Centro</h2>
+      <ul class="site-footer__list">
+<li><a href="../centro/">Il Centro</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../pilates/">Pilates</a></li>      </ul>
+    </nav>
+    <nav aria-labelledby="footer-pranavia">
+      <h2 class="site-footer__title site-footer__title--pranavia" id="footer-pranavia">Pranavia</h2>
+      <ul class="site-footer__list">
         <li><a href="../spazi/">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
-        <li><a href="../blog/">Blog</a></li>
         <li><a href="../safeguarding/">Safeguarding</a></li>
+        <li><a href="../blog/">Blog</a></li>
       </ul>
     </nav>
     <div>
@@ -191,7 +205,7 @@ Seguire queste tradizioni con consapevolezza significa onorare la storia e i val
   </div>
   <div class="site-footer__bottom">
     <div class="container--wide site-footer__bottom-inner">
-      <p class="site-footer__copyright">© 2026 Pranavia Dojo</p>
+      <p class="site-footer__copyright">© 2026 Pranavia ASD</p>
       <ul class="site-footer__legal">
         <li><a href="../privacy/">Privacy Policy</a></li>
         <li><a href="../cookie-policy/">Cookie Policy</a></li>

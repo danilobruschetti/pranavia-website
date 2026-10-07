@@ -67,7 +67,7 @@
 @media (min-width: 64em) {
   .brand img { height: 2.75rem; }
   .nav-toggle { display: none; }
-  .site-footer__grid { grid-template-columns: minmax(16rem, 1.35fr) minmax(9rem, 0.8fr) minmax(8rem, 0.75fr) auto; gap: var(--space-4) var(--space-7); }
+  .site-footer__grid { grid-template-columns: minmax(16rem, 1.4fr) repeat(3, minmax(8rem, 0.75fr)) auto; gap: var(--space-4) var(--space-6); }
 
   .site-nav {
     position: static;
@@ -145,8 +145,38 @@
   .site-nav__sub a { min-height: 2.75rem; font-size: 0.8125rem; letter-spacing: 0.1em; }
   .site-nav__sub a::after { display: none; }
 
+  /* place groups: two-line label (link to the place page) + chevron (opens the disciplines).
+     The underline runs under the whole label, clear of the hint, starting where the name starts. */
+  .site-nav__sub-toggle::after { display: none; }
+  .site-nav__hint { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.04em; }
+  .site-nav__name::before { width: 0.4rem; height: 0.4rem; }
+  .site-nav__group-head { align-items: flex-start; gap: 0.25rem; }
+  .site-nav__place { position: relative; }
+  .site-nav__place::after {
+    content: "";
+    position: absolute;
+    left: 0.95rem;
+    right: 0;
+    bottom: 0.2rem;
+    height: 1px;
+    background: var(--group-accent, var(--color-brand-terracotta));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-2) var(--ease);
+  }
+  .site-nav__place:hover::after,
+  .site-nav__place:focus-visible::after,
+  .site-nav__group:has(.site-nav__sub.is-open) .site-nav__place::after,
+  .site-nav__group.is-current .site-nav__place::after { transform: scaleX(1); }
+  .site-nav__group-head .site-nav__sub-toggle { width: 1.25rem; align-items: flex-start; padding-top: 0.5rem; }
+  .site-nav__group .site-nav__sub { border-top: 2px solid var(--group-accent); }
+  .site-nav__sub .site-nav__sub-intro { margin-bottom: var(--space-2); border-bottom: 1px solid var(--color-border); }
+  .site-nav__sub-intro a { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
+  .site-nav__sub-intro a span { font-size: 0.75rem; letter-spacing: 0.02em; }
+  .site-nav__contact { display: none; }
+
   /* hero: split composition */
-  .hero { padding-block: var(--space-7) var(--section-space); }
+  .hero { padding-block: var(--space-7) clamp(2.5rem, 1.5rem + 3vw, 4.5rem); }
   .hero .deco-sun { --sun-size: min(46vw, 40rem); top: -22%; right: -8%; }
   .hero .deco-branch { --branch-size: min(30vw, 26rem); }
   .hero__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: var(--space-8); }
@@ -182,6 +212,5 @@
 @media (min-width: 80em) {
   .hero__grid { gap: var(--space-9); }
   .page-hero__inner { gap: var(--space-9); }
-  .site-footer__grid { grid-template-columns: minmax(18rem, 1.25fr) minmax(20rem, 1.15fr) minmax(8rem, 0.65fr) auto; }
-  .site-footer nav[aria-labelledby="footer-discipline"] .site-footer__list { columns: 2; column-gap: var(--space-5); }
+  .site-footer__grid { grid-template-columns: minmax(20rem, 1.5fr) minmax(14rem, 1fr) repeat(2, minmax(8rem, 0.7fr)) auto; gap: var(--space-4) var(--space-7); }
 }

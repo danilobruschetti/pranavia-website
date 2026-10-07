@@ -1,6 +1,6 @@
-/* Pranavia Dojo — navigation.js
+/* Pranavia — navigation.js
    - Mobile menu: opens/closes, ESC closes, focus is trapped, page behind is inert.
-   - Desktop "Discipline" sub-menu: hover / click / keyboard (Arrow Down, ESC).
+   - Desktop place sub-menus (Dojo, Centro): hover / click / keyboard (Arrow Down, ESC).
    Progressive enhancement: without JS the menu is a plain list (see layout.css @media (scripting: none)). */
 (function () {
   'use strict';
@@ -41,8 +41,8 @@
     if (label) label.textContent = 'Chiudi';
     document.body.classList.add('is-menu-open');
     inertTargets().forEach(function (el) { el.setAttribute('inert', ''); });
-    // open the sub-menu that contains the current page
-    subs.forEach(function (li) { if (li.querySelector('[aria-current="page"]')) setSub(li, true); });
+    // v012: on phones both places (Dojo, Centro) open already expanded — the hierarchy is visible at a glance
+    subs.forEach(function (li) { setSub(li, true); });
   }
 
   function closeMenu(returnFocus) {

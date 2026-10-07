@@ -586,3 +586,189 @@ html.lb-open { overflow: hidden; }
   .reveal-media { clip-path: inset(0 0 8% 0); transition: clip-path 900ms var(--ease), opacity var(--dur-3) var(--ease), transform var(--dur-3) var(--ease); }
   .reveal-media.is-visible { clip-path: inset(0); }
 }
+
+/* ==========================================================================
+   v012 — brand hierarchy: PRANAVIA → Dojo / Centro → discipline
+   ========================================================================== */
+
+/* --- place tag: "Dojo · Arti marziali" / "Centro · Yoga e Pilates" (course pages, chapters) ------------ */
+.place-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-label);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--place-text, var(--color-terracotta-text));
+}
+.place-tag::before { content: ""; flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--place-accent, currentColor); }
+.place-tag a { color: inherit; text-decoration: none; }
+.place-tag a:hover { text-decoration: underline; text-underline-offset: 0.25em; }
+.is-dojo { --place-accent: var(--place-dojo); --place-text: var(--place-dojo-text); --place-soft: var(--place-dojo-soft); }
+.is-centro { --place-accent: var(--place-centro); --place-text: var(--place-centro-text); --place-soft: var(--place-centro-soft); }
+
+/* --- threshold: the index of the places, right under the hero, sticky while the places are on screen --- */
+.threshold {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 40;
+  border-block: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.2) blur(10px);
+}
+.threshold__inner { display: flex; align-items: stretch; justify-content: space-between; gap: var(--space-5); }
+.threshold__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); flex: 1 1 auto; list-style: none; margin: 0; padding: 0; }
+.threshold__list li { margin: 0; }
+.threshold__list li + li { border-left: 1px solid var(--color-border); }
+.threshold__link {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  min-height: 3rem;
+  padding: 0.7rem 0.9rem 0.7rem 0;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.threshold__list li + li .threshold__link { padding-left: 0.9rem; }
+.threshold__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--place-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-3) var(--ease);
+}
+.threshold__link:hover::after, .threshold__link.is-active::after { transform: scaleX(1); }
+.threshold__link:hover { color: var(--place-text); }
+.threshold__num { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--place-text); }
+.threshold__name { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.2; }
+.threshold__desc { display: none; font-size: var(--fs-small); color: var(--color-text-muted); }
+.threshold__place { display: none; }
+@media (min-width: 30em) {
+  .threshold__desc { display: inline; }
+}
+@media (min-width: 48em) {
+  .threshold__link { min-height: 3.75rem; align-items: center; gap: 0.8rem; padding-right: var(--space-6); }
+  .threshold__list li + li .threshold__link { padding-left: var(--space-6); }
+  .threshold__name { font-size: 1.3rem; }
+  .threshold__place {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: none;
+    padding-left: var(--space-5);
+    border-left: 1px solid var(--color-border);
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+  .threshold__place:hover { color: var(--color-brand-teal-deep); }
+  .threshold__place svg { width: 1.05rem; height: 1.05rem; color: var(--color-brand-teal-deep); }
+  .threshold__list { flex: 0 1 auto; grid-template-columns: repeat(2, auto); }
+}
+
+/* --- disciplines: a typographic index (not cards). One row = one course, the whole row is the link ------- */
+.disciplines { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border-strong); }
+.disciplines > li { margin: 0; border-bottom: 1px solid var(--color-border-strong); }
+.discipline {
+  --motif-fill: transparent;
+  position: relative;
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: var(--space-4);
+  min-height: 4.5rem;
+  padding: var(--space-3) var(--space-2) var(--space-3) 0;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: background-color var(--dur-2) var(--ease), padding var(--dur-3) var(--ease);
+}
+.discipline__mark {
+  justify-self: center;
+  font-family: var(--font-kanji);
+  font-size: 1.05rem;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  color: var(--place-text);
+  writing-mode: vertical-rl;
+  user-select: none;
+}
+.discipline__mark--motif { writing-mode: horizontal-tb; width: 2.5rem; height: 2.5rem; stroke: currentColor; fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.discipline__text { display: grid; gap: 0.15rem; }
+.discipline__name { font-family: var(--font-display); font-size: clamp(1.4rem, 1.15rem + 1.1vw, 2.15rem); line-height: 1.15; transition: color var(--dur-2) var(--ease); }
+.discipline__meta { font-size: var(--fs-small); line-height: 1.45; color: var(--color-text-muted); }
+.discipline__arrow { width: 1.25rem; height: 1.25rem; color: var(--place-text); transition: transform var(--dur-2) var(--ease); }
+.discipline:hover { background: color-mix(in srgb, var(--place-soft) 70%, transparent); padding-left: var(--space-3); }
+.discipline:hover .discipline__name { color: var(--place-text); }
+.discipline:hover .discipline__arrow { transform: translateX(5px); }
+.discipline:focus-visible { outline-offset: -2px; }
+.discipline[aria-current="page"] .discipline__name { color: var(--place-text); }
+.disciplines--compact .discipline { min-height: 3.75rem; }
+.disciplines--compact .discipline__name { font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.6rem); }
+@media (min-width: 48em) {
+  .discipline { grid-template-columns: 4rem minmax(0, 1fr) auto; min-height: 5.75rem; column-gap: var(--space-5); }
+  .discipline__mark { font-size: 1.25rem; }
+  .discipline__mark--motif { width: 3rem; height: 3rem; }
+}
+
+/* --- mobile action bar: "Lezione di prova" + WhatsApp, only on phones, only after the hero ---------------- */
+.action-bar { display: none; }
+@media (max-width: 47.99em) and (scripting: enabled) {
+  .action-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 55;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-2);
+    padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--color-bg) 94%, transparent);
+    -webkit-backdrop-filter: saturate(1.2) blur(12px);
+    backdrop-filter: saturate(1.2) blur(12px);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -10px 26px -20px rgb(43 47 44 / 0.35);
+    visibility: hidden;
+    transform: translateY(110%);
+    transition: transform var(--dur-3) var(--ease), visibility 0s linear var(--dur-3);
+  }
+  .action-bar.is-visible { visibility: visible; transform: none; transition-delay: 0s; }
+  .action-bar .btn { min-height: 2.75rem; padding-inline: 1.1rem; }
+}
+
+/* --- "shoji" reveal: photographs open from the centre like two sliding panels (once) --------------------- */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal].reveal-shoji { opacity: 1; transform: none; clip-path: inset(0 50% 0 50%); transition: clip-path 1100ms var(--ease); transition-delay: var(--reveal-delay, 0ms); }
+  [data-reveal].reveal-shoji.is-visible { clip-path: inset(0 0 0 0); }
+}
+
+/* --- very light parallax on full-bleed photographs (CSS scroll timelines; static where unsupported) ------- */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .parallax img {
+      scale: 1.12;
+      animation: parallax-drift linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+    }
+    @keyframes parallax-drift {
+      from { translate: 0 -5%; }
+      to { translate: 0 5%; }
+    }
+  }
+}
+.threshold__desc { white-space: nowrap; }
+@media (min-width: 48em) and (max-width: 63.99em) {      /* tablet: the two places share the bar, the address waits for desktop */
+  .threshold__place { display: none; }
+  .threshold__list { flex: 1 1 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

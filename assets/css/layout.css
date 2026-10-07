@@ -157,6 +157,40 @@
 }
 .site-nav__cta { align-self: flex-start; }
 
+/* place groups (v012): "Dojo" and "Centro" carry a one-line descriptor and their place colour */
+.site-nav__group--dojo { --group-accent: var(--place-dojo); }
+.site-nav__group--centro { --group-accent: var(--place-centro-text); }
+.site-nav__label { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; line-height: 1.1; }
+.site-nav__name { position: relative; display: inline-flex; align-items: center; gap: 0.55rem; }
+.site-nav__name::before {
+  content: "";
+  flex: none;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--group-accent, var(--color-brand-teal));
+}
+.site-nav__hint {
+  padding-left: 1rem;                     /* aligned with the name, after the place dot */
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--color-text-muted);
+}
+/* the name + hint is a link to the place page; the chevron beside it opens the disciplines */
+.site-nav__group-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
+.site-nav__group-head .site-nav__place { flex: 1 1 auto; width: auto; }
+.site-nav__group-head .site-nav__sub-toggle { flex: none; width: 2.75rem; min-height: 2.75rem; padding: 0; justify-content: center; }
+.site-nav__group.is-current .site-nav__place { color: var(--color-terracotta-text); }
+.site-nav__group--centro.is-current .site-nav__place { color: var(--place-centro-text); }
+.site-nav__sub-intro a { font-family: var(--font-display); font-size: 1.25rem; }
+.site-nav__sub-intro a span { margin-left: 0.6rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 500; color: var(--color-text-muted); }
+.site-nav__contact { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin: 0; font-size: var(--fs-small); }
+.site-nav__contact a { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; font-weight: 600; text-decoration: none; color: var(--color-text); }
+.site-nav__contact svg { width: 1.1rem; height: 1.1rem; }
+
 /* no-JS fallback: show the menu as a normal block under the header */
 @media (scripting: none) {
   .site-nav { position: static; visibility: visible; opacity: 1; transform: none; padding-block: var(--space-4); }
@@ -210,6 +244,9 @@
   text-transform: uppercase;
   color: var(--color-terracotta-text);
 }
+.site-footer__title--dojo { color: var(--place-dojo-text); }
+.site-footer__title--centro { color: var(--place-centro-text); }
+.site-footer__title--pranavia { color: var(--color-brand-teal-deep); }
 .site-footer__list { list-style: none; margin: 0; padding: 0; }
 .site-footer__list li { margin: 0; break-inside: avoid; }
 .site-footer__list a {

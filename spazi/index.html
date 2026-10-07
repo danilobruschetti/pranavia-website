@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Spazi - Pranavia Dojo</title>
-<meta name="description" content="Gli spazi del Pranavia Dojo a Roma: l’ingresso, la sala principale, le altre sale e gli spogliatoi.">
+<title>Spazi - Pranavia</title>
+<meta name="description" content="Gli spazi di Pranavia a Tor Fiscale, Roma: l’ingresso, il Dojo (la sala principale), le due sale del Centro e gli spogliatoi.">
 <link rel="canonical" href="https://pranaviadojo.com/spazi/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="theme-color" content="#F9F5ED">
 <meta property="og:locale" content="it_IT">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Pranavia Dojo">
-<meta property="og:title" content="Spazi - Pranavia Dojo">
-<meta property="og:description" content="Gli spazi del Pranavia Dojo a Roma: l’ingresso, la sala principale, le altre sale e gli spogliatoi.">
+<meta property="og:site_name" content="Pranavia">
+<meta property="og:title" content="Spazi - Pranavia">
+<meta property="og:description" content="Gli spazi di Pranavia a Tor Fiscale, Roma: l’ingresso, il Dojo (la sala principale), le due sale del Centro e gli spogliatoi.">
 <meta property="og:url" content="https://pranaviadojo.com/spazi/">
 <meta property="og:image" content="https://pranaviadojo.com/assets/images/og/default.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ingresso in legno del Pranavia Dojo a Roma">
+<meta property="og:image:alt" content="Ingresso in legno di Pranavia a Roma">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Spazi - Pranavia Dojo">
-<meta name="twitter:description" content="Gli spazi del Pranavia Dojo a Roma: l’ingresso, la sala principale, le altre sale e gli spogliatoi.">
+<meta name="twitter:title" content="Spazi - Pranavia">
+<meta name="twitter:description" content="Gli spazi di Pranavia a Tor Fiscale, Roma: l’ingresso, il Dojo (la sala principale), le due sale del Centro e gli spogliatoi.">
 <meta name="twitter:image" content="https://pranaviadojo.com/assets/images/og/default.jpg">
 
 <link rel="icon" href="../favicon.ico" sizes="32x32">
@@ -45,32 +45,42 @@
 <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 <header class="site-header" data-header>
   <div class="site-header__inner container--wide">
-    <a class="brand" href="../"><img src="../assets/images/brand/logo-pranavia-horizontal.png" width="786" height="252" alt="Pranavia Dojo — vai alla home"></a>
+    <a class="brand" href="../"><img src="../assets/images/brand/logo-pranavia-horizontal.png" width="786" height="252" alt="Pranavia — vai alla home"></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
       <span data-nav-label>Menu</span>
       <span class="nav-toggle__bars" aria-hidden="true"></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Principale" data-nav>
       <ul class="site-nav__list">
-        <li><a href="../">Home</a></li>
-        <li><a href="../dojo/">Il Dojo</a></li>
-        <li data-sub>
-          <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-discipline" data-sub-toggle>
-            <span>Corsi</span><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
-          </button>
-          <ul class="site-nav__sub" id="nav-discipline">
+        <li class="site-nav__group site-nav__group--dojo" data-sub>
+          <div class="site-nav__group-head">
+            <a class="site-nav__place" href="../dojo/"><span class="site-nav__label"><span class="site-nav__name">Dojo</span><span class="site-nav__hint">Arti marziali</span></span></a>
+            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-dojo" aria-label="Mostra le discipline del Dojo" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+          </div>
+          <ul class="site-nav__sub" id="nav-dojo">
+            <li class="site-nav__sub-intro"><a href="../dojo/">Il Dojo <span>La sala principale</span></a></li>
             <li><a href="../aikido/">Aikido</a></li>
             <li><a href="../karate/">Karate</a></li>
             <li><a href="../judo/">Judo</a></li>
-            <li><a href="../pilates/">Pilates</a></li>
-            <li><a href="../yoga/">Yoga</a></li>
             <li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>
+          </ul>
+        </li>
+        <li class="site-nav__group site-nav__group--centro" data-sub>
+          <div class="site-nav__group-head">
+            <a class="site-nav__place" href="../centro/"><span class="site-nav__label"><span class="site-nav__name">Centro</span><span class="site-nav__hint">Yoga · Pilates</span></span></a>
+            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-centro" aria-label="Mostra le discipline del Centro" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+          </div>
+          <ul class="site-nav__sub" id="nav-centro">
+            <li class="site-nav__sub-intro"><a href="../centro/">Il Centro <span>Le altre due sale</span></a></li>
+            <li><a href="../yoga/">Yoga</a></li>
+            <li><a href="../pilates/">Pilates</a></li>
           </ul>
         </li>
         <li><a href="../spazi/" aria-current="page">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
       </ul>
-      <a class="btn btn--primary site-nav__cta" href="../contatti/">Iscriviti</a>
+      <a class="btn btn--primary site-nav__cta" href="../contatti/">Lezione di prova</a>
+      <p class="site-nav__contact"><a href="tel:+393517338222"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>+39 351 733 8222</a><a href="https://api.whatsapp.com/send?phone=393517338222" target="_blank" rel="noopener noreferrer"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-message"></use></svg>WhatsApp<span class="visually-hidden"> (si apre in una nuova scheda)</span></a></p>
     </nav>
   </div>
 </header><main id="contenuto" tabindex="-1">
@@ -84,18 +94,19 @@
 <li><a href="../">Home</a></li><li><span aria-current="page">Spazi</span></li>  </ol>
 </nav>
       <h1 class="page-hero__title" id="page-title">Spazi</h1>
-      <p class="lead page-hero__lead">L’ingresso, la sala principale, le altre sale e gli spogliatoi del Pranavia Dojo.</p>
+      <p class="lead page-hero__lead">L’ingresso, il Dojo, le due sale del Centro e gli spogliatoi di Pranavia.</p>
     </div>
-    <span class="vertical-mark" lang="ja" aria-hidden="true">道場</span>
   </div>
 </section>
 
-<section class="section section--flush-top" aria-label="Foto degli spazi del dojo">
+<section class="section section--flush-top" aria-label="Foto degli spazi di Pranavia">
   <div class="container--wide">
-    <ul class="gbento">
-  <li class="gtile--big">
+    <div class="space-group" id="ingresso">
+      <div class="space-group__head" data-reveal><h2>L’ingresso</h2></div>
+      <ul class="gbento">
+  <li>
     <a class="gtile" href="../assets/images/entrance/facade-wide-1600.webp" data-lightbox="spazi" data-i="0">
-      <picture><source type="image/avif" srcset="../assets/images/entrance/facade-wide-480.avif 480w, ../assets/images/entrance/facade-wide-800.avif 800w, ../assets/images/entrance/facade-wide-1200.avif 1200w, ../assets/images/entrance/facade-wide-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/entrance/facade-wide-480.webp 480w, ../assets/images/entrance/facade-wide-800.webp 800w, ../assets/images/entrance/facade-wide-1200.webp 1200w, ../assets/images/entrance/facade-wide-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/entrance/facade-wide-1200.webp" width="1200" height="800" alt="Facciata in legno del Pranavia Dojo con l’onda scolpita sulla porta" loading="eager" decoding="async" fetchpriority="high"></picture>
+      <picture><source type="image/avif" srcset="../assets/images/entrance/facade-wide-480.avif 480w, ../assets/images/entrance/facade-wide-800.avif 800w, ../assets/images/entrance/facade-wide-1200.avif 1200w, ../assets/images/entrance/facade-wide-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/entrance/facade-wide-480.webp 480w, ../assets/images/entrance/facade-wide-800.webp 800w, ../assets/images/entrance/facade-wide-1200.webp 1200w, ../assets/images/entrance/facade-wide-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/entrance/facade-wide-1200.webp" width="1200" height="800" alt="Facciata in legno di Pranavia con l’onda scolpita sulla porta" loading="eager" decoding="async" fetchpriority="high"></picture>
     </a>
   </li>
   <li>
@@ -105,7 +116,7 @@
   </li>
   <li>
     <a class="gtile" href="../assets/images/entrance/entry-corridor-1024.webp" data-lightbox="spazi" data-i="2">
-      <picture><source type="image/avif" srcset="../assets/images/entrance/entry-corridor-480.avif 480w, ../assets/images/entrance/entry-corridor-800.avif 800w, ../assets/images/entrance/entry-corridor-1024.avif 1024w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/entrance/entry-corridor-480.webp 480w, ../assets/images/entrance/entry-corridor-800.webp 800w, ../assets/images/entrance/entry-corridor-1024.webp 1024w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/entrance/entry-corridor-1024.webp" width="1024" height="1536" alt="" loading="eager" decoding="async"></picture>
+      <picture><source type="image/avif" srcset="../assets/images/entrance/entry-corridor-480.avif 480w, ../assets/images/entrance/entry-corridor-800.avif 800w, ../assets/images/entrance/entry-corridor-1024.avif 1024w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/entrance/entry-corridor-480.webp 480w, ../assets/images/entrance/entry-corridor-800.webp 800w, ../assets/images/entrance/entry-corridor-1024.webp 1024w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/entrance/entry-corridor-1024.webp" width="1024" height="1536" alt="Ingresso con le scarpiere in legno e l’insegna Sokutakudoji sulla porta" loading="eager" decoding="async"></picture>
     </a>
   </li>
   <li>
@@ -113,9 +124,14 @@
       <picture><source type="image/avif" srcset="../assets/images/entrance/sign-sokutakudoji-480.avif 480w, ../assets/images/entrance/sign-sokutakudoji-800.avif 800w, ../assets/images/entrance/sign-sokutakudoji-1200.avif 1200w, ../assets/images/entrance/sign-sokutakudoji-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/entrance/sign-sokutakudoji-480.webp 480w, ../assets/images/entrance/sign-sokutakudoji-800.webp 800w, ../assets/images/entrance/sign-sokutakudoji-1200.webp 1200w, ../assets/images/entrance/sign-sokutakudoji-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/entrance/sign-sokutakudoji-1200.webp" width="1200" height="800" alt="Insegna in legno all’ingresso del dojo" loading="eager" decoding="async"></picture>
     </a>
   </li>
+      </ul>
+    </div>
+    <div class="space-group is-dojo" id="dojo">
+      <div class="space-group__head" data-reveal><p class="place-tag">Sala principale</p><h2>Il Dojo</h2></div>
+      <ul class="gbento">
   <li class="gtile--big">
     <a class="gtile" href="../assets/images/dojo/hall-wide-1600.webp" data-lightbox="spazi" data-i="4" data-reveal>
-      <picture><source type="image/avif" srcset="../assets/images/dojo/hall-wide-480.avif 480w, ../assets/images/dojo/hall-wide-800.avif 800w, ../assets/images/dojo/hall-wide-1200.avif 1200w, ../assets/images/dojo/hall-wide-1600.avif 1600w, ../assets/images/dojo/hall-wide-2000.avif 2000w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/dojo/hall-wide-480.webp 480w, ../assets/images/dojo/hall-wide-800.webp 800w, ../assets/images/dojo/hall-wide-1200.webp 1200w, ../assets/images/dojo/hall-wide-1600.webp 1600w, ../assets/images/dojo/hall-wide-2000.webp 2000w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/dojo/hall-wide-1200.webp" width="1200" height="800" alt="La grande sala del Pranavia Dojo con il tatami e il soffitto in legno illuminato" loading="lazy" decoding="async" fetchpriority="low"></picture>
+      <picture><source type="image/avif" srcset="../assets/images/dojo/hall-wide-480.avif 480w, ../assets/images/dojo/hall-wide-800.avif 800w, ../assets/images/dojo/hall-wide-1200.avif 1200w, ../assets/images/dojo/hall-wide-1600.avif 1600w, ../assets/images/dojo/hall-wide-2000.avif 2000w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/dojo/hall-wide-480.webp 480w, ../assets/images/dojo/hall-wide-800.webp 800w, ../assets/images/dojo/hall-wide-1200.webp 1200w, ../assets/images/dojo/hall-wide-1600.webp 1600w, ../assets/images/dojo/hall-wide-2000.webp 2000w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/dojo/hall-wide-1200.webp" width="1200" height="800" alt="La grande sala del Dojo di Pranavia con il tatami e il soffitto in legno illuminato" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
@@ -133,7 +149,7 @@
       <picture><source type="image/avif" srcset="../assets/images/dojo/tokonoma-aikido-panel-320.avif 320w, ../assets/images/dojo/tokonoma-aikido-panel-480.avif 480w, ../assets/images/dojo/tokonoma-aikido-panel-800.avif 800w, ../assets/images/dojo/tokonoma-aikido-panel-1200.avif 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/dojo/tokonoma-aikido-panel-320.webp 320w, ../assets/images/dojo/tokonoma-aikido-panel-480.webp 480w, ../assets/images/dojo/tokonoma-aikido-panel-800.webp 800w, ../assets/images/dojo/tokonoma-aikido-panel-1200.webp 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/dojo/tokonoma-aikido-panel-1200.webp" width="1200" height="1800" alt="Pannello con calligrafia e ritratti alla parete del dojo" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
-  <li class="gtile--big">
+  <li>
     <a class="gtile" href="../assets/images/dojo/archway-bokken-1600.webp" data-lightbox="spazi" data-i="8" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/dojo/archway-bokken-320.avif 320w, ../assets/images/dojo/archway-bokken-480.avif 480w, ../assets/images/dojo/archway-bokken-800.avif 800w, ../assets/images/dojo/archway-bokken-1200.avif 1200w, ../assets/images/dojo/archway-bokken-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/dojo/archway-bokken-320.webp 320w, ../assets/images/dojo/archway-bokken-480.webp 480w, ../assets/images/dojo/archway-bokken-800.webp 800w, ../assets/images/dojo/archway-bokken-1200.webp 1200w, ../assets/images/dojo/archway-bokken-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/dojo/archway-bokken-1200.webp" width="1200" height="800" alt="Nicchie ad arco con bastoni e bokken" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
@@ -153,47 +169,63 @@
       <picture><source type="image/avif" srcset="../assets/images/dojo/zen-garden-480.avif 480w, ../assets/images/dojo/zen-garden-800.avif 800w, ../assets/images/dojo/zen-garden-1200.avif 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/dojo/zen-garden-480.webp 480w, ../assets/images/dojo/zen-garden-800.webp 800w, ../assets/images/dojo/zen-garden-1200.webp 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/dojo/zen-garden-1200.webp" width="1200" height="1800" alt="Giardino di sassi e piante all’interno del dojo" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
+  <li>
+    <a class="gtile" href="../assets/images/dojo/hall-side-light-1600.webp" data-lightbox="spazi" data-i="12" data-reveal>
+  <picture><source type="image/avif" srcset="../assets/images/dojo/hall-side-light-480.avif 480w, ../assets/images/dojo/hall-side-light-800.avif 800w, ../assets/images/dojo/hall-side-light-1200.avif 1200w, ../assets/images/dojo/hall-side-light-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 44vw"><source type="image/webp" srcset="../assets/images/dojo/hall-side-light-480.webp 480w, ../assets/images/dojo/hall-side-light-800.webp 800w, ../assets/images/dojo/hall-side-light-1200.webp 1200w, ../assets/images/dojo/hall-side-light-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 44vw"><img src="../assets/images/dojo/hall-side-light-1200.webp" width="1200" height="800" alt="Il Dojo, la sala principale di Pranavia, con luce naturale dalle finestre" loading="lazy" decoding="async" fetchpriority="low"></picture>
+</a>
+  </li>
+      </ul>
+    </div>
+    <div class="space-group is-centro" id="centro">
+      <div class="space-group__head" data-reveal><p class="place-tag">Il Centro</p><h2>Le sale Yoga e Pilates</h2></div>
+      <ul class="gbento">
   <li class="gtile--big">
-    <a class="gtile" href="../assets/images/rooms/parquet-hall-1600.webp" data-lightbox="spazi" data-i="12" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/parquet-hall-1600.webp" data-lightbox="spazi" data-i="13" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/parquet-hall-320.avif 320w, ../assets/images/rooms/parquet-hall-480.avif 480w, ../assets/images/rooms/parquet-hall-800.avif 800w, ../assets/images/rooms/parquet-hall-1200.avif 1200w, ../assets/images/rooms/parquet-hall-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/parquet-hall-320.webp 320w, ../assets/images/rooms/parquet-hall-480.webp 480w, ../assets/images/rooms/parquet-hall-800.webp 800w, ../assets/images/rooms/parquet-hall-1200.webp 1200w, ../assets/images/rooms/parquet-hall-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/parquet-hall-1200.webp" width="1200" height="800" alt="Sala con parquet e travi in legno" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/barre-mirror-1600.webp" data-lightbox="spazi" data-i="13" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/barre-mirror-1600.webp" data-lightbox="spazi" data-i="14" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/barre-mirror-320.avif 320w, ../assets/images/rooms/barre-mirror-480.avif 480w, ../assets/images/rooms/barre-mirror-800.avif 800w, ../assets/images/rooms/barre-mirror-1200.avif 1200w, ../assets/images/rooms/barre-mirror-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/barre-mirror-320.webp 320w, ../assets/images/rooms/barre-mirror-480.webp 480w, ../assets/images/rooms/barre-mirror-800.webp 800w, ../assets/images/rooms/barre-mirror-1200.webp 1200w, ../assets/images/rooms/barre-mirror-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/barre-mirror-1200.webp" width="1200" height="800" alt="Sala con pavimento in parquet, specchio e sbarra" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/parquet-barre-1600.webp" data-lightbox="spazi" data-i="14" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/parquet-barre-1600.webp" data-lightbox="spazi" data-i="15" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/parquet-barre-480.avif 480w, ../assets/images/rooms/parquet-barre-800.avif 800w, ../assets/images/rooms/parquet-barre-1200.avif 1200w, ../assets/images/rooms/parquet-barre-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/parquet-barre-480.webp 480w, ../assets/images/rooms/parquet-barre-800.webp 800w, ../assets/images/rooms/parquet-barre-1200.webp 1200w, ../assets/images/rooms/parquet-barre-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/parquet-barre-1200.webp" width="1200" height="800" alt="Sala con pavimento in parquet, specchio e sbarra" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/tatami-mirror-1600.webp" data-lightbox="spazi" data-i="15" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/tatami-mirror-1600.webp" data-lightbox="spazi" data-i="16" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/tatami-mirror-480.avif 480w, ../assets/images/rooms/tatami-mirror-800.avif 800w, ../assets/images/rooms/tatami-mirror-1200.avif 1200w, ../assets/images/rooms/tatami-mirror-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/tatami-mirror-480.webp 480w, ../assets/images/rooms/tatami-mirror-800.webp 800w, ../assets/images/rooms/tatami-mirror-1200.webp 1200w, ../assets/images/rooms/tatami-mirror-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/tatami-mirror-1200.webp" width="1200" height="800" alt="Sala con tatami verde e specchio" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/equipment-shelf-1600.webp" data-lightbox="spazi" data-i="16" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/equipment-shelf-1600.webp" data-lightbox="spazi" data-i="17" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/equipment-shelf-480.avif 480w, ../assets/images/rooms/equipment-shelf-800.avif 800w, ../assets/images/rooms/equipment-shelf-1200.avif 1200w, ../assets/images/rooms/equipment-shelf-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/equipment-shelf-480.webp 480w, ../assets/images/rooms/equipment-shelf-800.webp 800w, ../assets/images/rooms/equipment-shelf-1200.webp 1200w, ../assets/images/rooms/equipment-shelf-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/equipment-shelf-1200.webp" width="1200" height="800" alt="Scaffale in legno con palle e piccoli attrezzi" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
+      </ul>
+    </div>
+    <div class="space-group" id="spogliatoi">
+      <div class="space-group__head" data-reveal><h2>Gli spogliatoi</h2></div>
+      <ul class="gbento gbento--3">
   <li>
-    <a class="gtile" href="../assets/images/rooms/changing-waves-1200.webp" data-lightbox="spazi" data-i="17" data-reveal>
+    <a class="gtile" href="../assets/images/rooms/changing-waves-1200.webp" data-lightbox="spazi" data-i="18" data-reveal>
       <picture><source type="image/avif" srcset="../assets/images/rooms/changing-waves-480.avif 480w, ../assets/images/rooms/changing-waves-800.avif 800w, ../assets/images/rooms/changing-waves-1200.avif 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/changing-waves-480.webp 480w, ../assets/images/rooms/changing-waves-800.webp 800w, ../assets/images/rooms/changing-waves-1200.webp 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/changing-waves-1200.webp" width="1200" height="1800" alt="Spogliatoio in legno con un paravento decorato con onde" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/changing-kimono-1200.webp" data-lightbox="spazi" data-i="18" data-reveal>
-      <picture><source type="image/avif" srcset="../assets/images/rooms/changing-kimono-480.avif 480w, ../assets/images/rooms/changing-kimono-800.avif 800w, ../assets/images/rooms/changing-kimono-1200.avif 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/changing-kimono-480.webp 480w, ../assets/images/rooms/changing-kimono-800.webp 800w, ../assets/images/rooms/changing-kimono-1200.webp 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/changing-kimono-1200.webp" width="1200" height="1800" alt="" loading="lazy" decoding="async" fetchpriority="low"></picture>
+    <a class="gtile" href="../assets/images/rooms/changing-kimono-1200.webp" data-lightbox="spazi" data-i="19" data-reveal>
+      <picture><source type="image/avif" srcset="../assets/images/rooms/changing-kimono-480.avif 480w, ../assets/images/rooms/changing-kimono-800.avif 800w, ../assets/images/rooms/changing-kimono-1200.avif 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/changing-kimono-480.webp 480w, ../assets/images/rooms/changing-kimono-800.webp 800w, ../assets/images/rooms/changing-kimono-1200.webp 1200w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/changing-kimono-1200.webp" width="1200" height="1800" alt="Spogliatoio con un paravento dipinto con figure giapponesi e panche in legno" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
   <li>
-    <a class="gtile" href="../assets/images/rooms/changing-corridor-1600.webp" data-lightbox="spazi" data-i="19" data-reveal>
-      <picture><source type="image/avif" srcset="../assets/images/rooms/changing-corridor-480.avif 480w, ../assets/images/rooms/changing-corridor-800.avif 800w, ../assets/images/rooms/changing-corridor-1200.avif 1200w, ../assets/images/rooms/changing-corridor-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/changing-corridor-480.webp 480w, ../assets/images/rooms/changing-corridor-800.webp 800w, ../assets/images/rooms/changing-corridor-1200.webp 1200w, ../assets/images/rooms/changing-corridor-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/changing-corridor-1200.webp" width="1200" height="800" alt="" loading="lazy" decoding="async" fetchpriority="low"></picture>
+    <a class="gtile" href="../assets/images/rooms/changing-corridor-1600.webp" data-lightbox="spazi" data-i="20" data-reveal>
+      <picture><source type="image/avif" srcset="../assets/images/rooms/changing-corridor-480.avif 480w, ../assets/images/rooms/changing-corridor-800.avif 800w, ../assets/images/rooms/changing-corridor-1200.avif 1200w, ../assets/images/rooms/changing-corridor-1600.avif 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><source type="image/webp" srcset="../assets/images/rooms/changing-corridor-480.webp 480w, ../assets/images/rooms/changing-corridor-800.webp 800w, ../assets/images/rooms/changing-corridor-1200.webp 1200w, ../assets/images/rooms/changing-corridor-1600.webp 1600w" sizes="(min-width: 64em) 22vw, (min-width: 40em) 30vw, 46vw"><img src="../assets/images/rooms/changing-corridor-1200.webp" width="1200" height="800" alt="Spogliatoio con panche e attaccapanni in legno e un paravento decorato con onde" loading="lazy" decoding="async" fetchpriority="low"></picture>
     </a>
   </li>
-</ul>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -201,7 +233,7 @@
   <div class="container--wide band__inner">
     <div data-reveal>
       <h2 class="band__title" id="band-title">Vieni a trovarci</h2>
-      <p class="band__text">Visita il Dojo o effettua una lezione di prova gratuita e senza impegno.</p>
+      <p class="band__text">Visita Pranavia o prenota una lezione di prova gratuita e senza impegno.</p>
       <div class="btn-row" style="margin-top: var(--space-5)">
         <a class="btn btn--light" href="../contatti/">Contattaci <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
 <a class="btn btn--ghost-light" href="../dojo/">Il Dojo</a>      </div>
@@ -223,27 +255,31 @@
     <div class="site-footer__brand">
       <div class="site-footer__identity">
         <img src="../assets/images/brand/logo-mark.png" width="305" height="356" alt="" loading="lazy" decoding="async">
-        <p><strong class="site-footer__brand-name">Pranavia Dojo</strong><span class="site-footer__association">Associazione Sportiva Dilettantistica Pranavia ASD</span></p>
+        <p><strong class="site-footer__brand-name">Pranavia</strong><span class="site-footer__association">Associazione Sportiva Dilettantistica Pranavia ASD</span></p>
       </div>
       <address class="site-footer__contact">
-        <span>Via Monte D’Onorio, 7 <span aria-hidden="true">·</span> 00178 Roma</span>
+        <span>Via Monte D’Onorio, 7 <span aria-hidden="true">·</span> 00178 Roma <span aria-hidden="true">·</span> Tor Fiscale</span>
         <span class="site-footer__contact-links"><a href="tel:+393517338222">+39 351 733 8222</a><a href="mailto:info@pranaviadojo.com">info@pranaviadojo.com</a></span>
       </address>
       <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Via%20Monte%20D%27Onorio%2C%207%2C%2000178%20Roma%20RM%2C%20Italia" target="_blank" rel="noopener noreferrer">Indicazioni <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg><span class="visually-hidden"> (Google Maps, nuova scheda)</span></a>
     </div>
-    <nav aria-labelledby="footer-discipline">
-      <h2 class="site-footer__title" id="footer-discipline">Corsi</h2>
-      <ul class="site-footer__list">
-<li><a href="../aikido/">Aikido</a></li><li><a href="../karate/">Karate</a></li><li><a href="../judo/">Judo</a></li><li><a href="../pilates/">Pilates</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>      </ul>
-    </nav>
     <nav aria-labelledby="footer-dojo">
-      <h2 class="site-footer__title" id="footer-dojo">Il Dojo</h2>
+      <h2 class="site-footer__title site-footer__title--dojo" id="footer-dojo">Dojo</h2>
       <ul class="site-footer__list">
-        <li><a href="../dojo/">Il Dojo</a></li>
+<li><a href="../dojo/">Il Dojo</a></li><li><a href="../aikido/">Aikido</a></li><li><a href="../karate/">Karate</a></li><li><a href="../judo/">Judo</a></li><li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>      </ul>
+    </nav>
+    <nav aria-labelledby="footer-centro">
+      <h2 class="site-footer__title site-footer__title--centro" id="footer-centro">Centro</h2>
+      <ul class="site-footer__list">
+<li><a href="../centro/">Il Centro</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../pilates/">Pilates</a></li>      </ul>
+    </nav>
+    <nav aria-labelledby="footer-pranavia">
+      <h2 class="site-footer__title site-footer__title--pranavia" id="footer-pranavia">Pranavia</h2>
+      <ul class="site-footer__list">
         <li><a href="../spazi/">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
-        <li><a href="../blog/">Blog</a></li>
         <li><a href="../safeguarding/">Safeguarding</a></li>
+        <li><a href="../blog/">Blog</a></li>
       </ul>
     </nav>
     <div>
@@ -256,14 +292,18 @@
   </div>
   <div class="site-footer__bottom">
     <div class="container--wide site-footer__bottom-inner">
-      <p class="site-footer__copyright">© 2026 Pranavia Dojo</p>
+      <p class="site-footer__copyright">© 2026 Pranavia ASD</p>
       <ul class="site-footer__legal">
         <li><a href="../privacy/">Privacy Policy</a></li>
         <li><a href="../cookie-policy/">Cookie Policy</a></li>
       </ul>
     </div>
   </div>
-</footer><script src="../assets/js/main.js" defer></script>
+</footer><div class="action-bar" data-action-bar>
+  <a class="btn btn--primary" href="../contatti/">Lezione di prova</a>
+  <a class="btn btn--outline" href="https://api.whatsapp.com/send?phone=393517338222" target="_blank" rel="noopener noreferrer"><svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-message"></use></svg>WhatsApp<span class="visually-hidden"> (si apre in una nuova scheda)</span></a>
+</div>
+<script src="../assets/js/main.js" defer></script>
 <script src="../assets/js/navigation.js" defer></script>
 <script src="../assets/js/reveal.js" defer></script>
 <script src="../assets/js/gallery.js" defer></script>

@@ -1,4 +1,4 @@
-/* Pranavia Dojo — gallery.js
+/* Pranavia — gallery.js
    Lightbox for the photo mosaics: <a data-lightbox="group" href="big.webp"> around a <picture>.
    Without JavaScript the links simply open the larger photo. Arrow keys, swipe, Esc and the buttons work;
    the dialog is a native modal <dialog> (focus is trapped and returned to the photo that opened it). */
