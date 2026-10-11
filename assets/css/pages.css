@@ -183,8 +183,8 @@
 .media--banner { aspect-ratio: 16 / 10; }
 
 /* ==========================================================================
-   v012 — PRANAVIA as master brand: hero, "il luogo", chapters 01 Dojo / 02 Centro,
-   place pages (/dojo/, /centro/), course → place links, Spazi grouped by place.
+   v012 — PRANAVIA as master brand: hero, "il luogo", chapters 01 Dojo / 02 Studio,
+   place pages (/dojo/, /studio/), course → place links, Spazi grouped by place.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -230,17 +230,17 @@
 .intro-place__text { max-width: 36rem; }
 .intro-place__text strong { font-weight: 600; }
 .intro-place__text .is-dojo-word { color: var(--place-dojo-text); }
-.intro-place__text .is-centro-word { color: var(--place-centro-text); }
+.intro-place__text .is-studio-word { color: var(--place-studio-text); }
 .intro-place__media { width: min(100%, 20rem); margin: 0 0 0 auto; }
 .intro-place__media .media { aspect-ratio: 4 / 5; }
 .intro-place__media figcaption { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-text-muted); }
 
 /* --------------------------------------------------------------------------
-   Chapters (home): 01 Dojo = full-bleed photograph + sticky head + index; 02 Centro = two staggered rooms
+   Chapters (home): 01 Dojo = full-bleed photograph + sticky head + index; 02 Studio = two staggered rooms
    -------------------------------------------------------------------------- */
 .chapter { position: relative; }
 .chapter--dojo { padding-block: var(--section-space); background-color: var(--color-bg-soft); background-image: var(--paper-grain); }
-.chapter--centro { padding-block: var(--section-space); background-color: var(--place-centro-soft); background-image: var(--paper-grain); overflow: clip; }
+.chapter--studio { padding-block: var(--section-space); background-color: var(--place-studio-soft); background-image: var(--paper-grain); overflow: clip; }
 
 .chapter__grid { display: grid; gap: var(--space-7); }
 .chapter__head { position: relative; }
@@ -283,7 +283,7 @@
 .chapter__head .chapter__quote::before { content: ""; position: absolute; top: 0; left: 0; width: 2.5rem; height: 2px; background: var(--place-accent); }
 .chapter__cta { margin-top: var(--space-6); }
 
-/* 02 Centro: two rooms, two photographs — staggered, never side by side */
+/* 02 Studio: two rooms, two photographs — staggered, never side by side */
 .duo { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .duo__a { grid-column: 1 / 11; grid-row: 1; }
 .duo__b { grid-column: 4 / 13; grid-row: 2; margin-top: -16%; z-index: 1; box-shadow: var(--shadow-soft); }
@@ -301,10 +301,10 @@
   text-transform: uppercase;
   color: var(--place-text);
 }
-.chapter--centro .disciplines { margin-top: var(--space-6); }
+.chapter--studio .disciplines { margin-top: var(--space-6); }
 
 /* --------------------------------------------------------------------------
-   Place pages (/dojo/, /centro/) and course → place links
+   Place pages (/dojo/, /studio/) and course → place links
    -------------------------------------------------------------------------- */
 .place-hero .page-hero__title { font-size: clamp(3rem, 2rem + 4.4vw, 6rem); line-height: 1; }
 .place-intro { display: grid; gap: var(--space-7); }
@@ -348,11 +348,11 @@
   .chapter--dojo .chapter__body .disciplines > li { display: flex; flex: 1 1 0; }
   .chapter--dojo .chapter__body .discipline { flex: 1 1 auto; }
 
-  .chapter--centro .chapter__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-9); align-items: center; }
+  .chapter--studio .chapter__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-9); align-items: center; }
   .related-place { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); }
 }
 
-/* "the other place": a quiet link from /dojo/ to /centro/ and back */
+/* "the other place": a quiet link from /dojo/ to /studio/ and back */
 .place-next {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -374,3 +374,25 @@
 @media (max-width: 47.99em) {
   .intro-place__media { display: none; }
 }
+
+/* ==========================================================================
+   v013 - calendario e orari dinamici: composizioni di pagina
+   ========================================================================== */
+
+/* course pages: "Orari del corso" is one card with the times of that course */
+.course-schedule__card {
+  display: grid;
+  gap: var(--space-6);
+  padding: clamp(1.5rem, 1rem + 2.2vw, 2.75rem);
+  background: var(--color-bg-paper);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+}
+.course-schedule__head .place-tag { margin-bottom: var(--space-2); }
+.course-schedule__head h2 { margin: 0; font-size: var(--fs-h3); }
+.course-schedule__foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
+
+/* /dojo/ and /studio/: the week of the place, under the list of disciplines */
+.place-schedule .place-intro { padding-top: var(--space-7); border-top: 1px solid var(--color-border-strong); }
+.place-schedule .place-intro__head .link-arrow { margin-top: var(--space-2); }

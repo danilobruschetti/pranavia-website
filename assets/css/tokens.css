@@ -25,14 +25,14 @@
 
   /* --- colour: places (v012) ---------------------------------------------
      PRANAVIA is the master brand (teal, from the logo). Inside it live two places:
-     the Dojo (main hall, martial arts) = terracotta, the Centro (two rooms, Yoga/Pilates) = sage.
+     the Dojo (main hall, martial arts) = terracotta, the Studio (two rooms, Yoga/Pilates) = sage.
      Use these, not the raw palette, whenever a colour has to say "which place". */
   --place-dojo: var(--color-brand-terracotta);
   --place-dojo-text: var(--color-terracotta-text);
   --place-dojo-soft: var(--color-clay-soft);
-  --place-centro: var(--color-sage);
-  --place-centro-text: var(--color-sage-ink);
-  --place-centro-soft: var(--color-sage-soft);
+  --place-studio: var(--color-sage);
+  --place-studio-text: var(--color-sage-ink);
+  --place-studio-soft: var(--color-sage-soft);
 
   /* --- colour: text ------------------------------------------------------ */
   --color-text: #2b2f2c;                   /* carbone, non nero assoluto */

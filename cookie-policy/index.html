@@ -58,24 +58,25 @@
             <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-dojo" aria-label="Mostra le discipline del Dojo" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
           </div>
           <ul class="site-nav__sub" id="nav-dojo">
-            <li class="site-nav__sub-intro"><a href="../dojo/">Il Dojo <span>La sala principale</span></a></li>
+            <li class="site-nav__sub-intro"><a href="../dojo/">Il Dojo</a></li>
             <li><a href="../aikido/">Aikido</a></li>
             <li><a href="../karate/">Karate</a></li>
             <li><a href="../judo/">Judo</a></li>
             <li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>
           </ul>
         </li>
-        <li class="site-nav__group site-nav__group--centro" data-sub>
+        <li class="site-nav__group site-nav__group--studio" data-sub>
           <div class="site-nav__group-head">
-            <a class="site-nav__place" href="../centro/"><span class="site-nav__label"><span class="site-nav__name">Centro</span><span class="site-nav__hint">Yoga · Pilates</span></span></a>
-            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-centro" aria-label="Mostra le discipline del Centro" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+            <a class="site-nav__place" href="../studio/"><span class="site-nav__label"><span class="site-nav__name">Studio</span><span class="site-nav__hint">Yoga · Pilates</span></span></a>
+            <button class="site-nav__sub-toggle" type="button" aria-expanded="false" aria-controls="nav-studio" aria-label="Mostra le discipline dello Studio" data-sub-toggle><svg class="site-nav__chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
           </div>
-          <ul class="site-nav__sub" id="nav-centro">
-            <li class="site-nav__sub-intro"><a href="../centro/">Il Centro <span>Le altre due sale</span></a></li>
+          <ul class="site-nav__sub" id="nav-studio">
+            <li class="site-nav__sub-intro"><a href="../studio/">Lo Studio</a></li>
             <li><a href="../yoga/">Yoga</a></li>
             <li><a href="../pilates/">Pilates</a></li>
           </ul>
         </li>
+        <li><a href="../calendario/">Calendario</a></li>
         <li><a href="../spazi/">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
       </ul>
@@ -98,7 +99,7 @@
 <section class="section section--flush-top" aria-labelledby="cookie-content-title">
   <div class="container--text">
     <div class="prose" data-reveal>
-      <p><strong>Ultimo aggiornamento: 23 settembre 2026.</strong></p>
+      <p><strong>Ultimo aggiornamento: 9 ottobre 2026.</strong></p>
 
       <h2 id="cookie-content-title">Cosa sono i cookie</h2>
       <p>I cookie sono piccoli file di testo che un sito può memorizzare nel browser. Possono essere tecnici, quando sono necessari alla navigazione o a un servizio richiesto, oppure non tecnici, quando vengono utilizzati per misurazione, personalizzazione, profilazione o pubblicità.</p>
@@ -106,10 +107,14 @@
       <h2>Cookie utilizzati da questo sito</h2>
       <p>La versione attuale di pranaviadojo.com non installa cookie di profilazione, marketing o analytics e non utilizza il browser per tracciare gli utenti. Il sito non contiene Google Analytics, Google Tag Manager, pixel pubblicitari, mappe incorporate, feed social o video YouTube incorporati.</p>
       <p>Il sito memorizza nel <em>local storage</em> del browser una sola preferenza tecnica, denominata <code>pranavia_privacy_notice</code>, contenente la data della presa visione dell’avviso privacy e cookie. Serve esclusivamente a non riproporre l’avviso a ogni pagina, non identifica l’utente, non viene trasmessa al Titolare e viene considerata scaduta dopo 180 giorni.</p>
+      <p>Per mostrare più rapidamente orari, avvisi ed eventi, il sito conserva inoltre nel <em>session storage</em> del browser una copia temporanea del foglio informativo letto da Google Fogli (voci che iniziano con <code>pranavia:</code>). Questi dati vengono cancellati alla chiusura della scheda, non identificano l’utente e non vengono trasmessi al Titolare.</p>
       <p>Il fornitore di hosting o la rete di distribuzione possono usare esclusivamente cookie o identificatori tecnici strettamente necessari alla sicurezza, alla disponibilità e alla corretta consegna delle pagine. Questi strumenti non richiedono consenso preventivo, ma sono descritti nella presente informativa.</p>
 
       <h2>Servizi esterni raggiunti tramite link</h2>
       <p>I collegamenti a WhatsApp, Google Maps, Facebook e Instagram non installano cookie sul tuo dispositivo durante la permanenza su pranaviadojo.com. Se selezioni uno di questi collegamenti, apri il sito del relativo fornitore, che potrà utilizzare cookie secondo le proprie regole.</p>
+
+      <h2>Orari, avvisi ed eventi (Google Fogli)</h2>
+      <p>Le pagine con il calendario dei corsi leggono un foglio Google a sola lettura. La richiesta viene effettuata senza cookie e il sito non memorizza cookie di Google. Maggiori informazioni sono nella <a href="../privacy/">Privacy Policy</a>.</p>
 
       <h2>Perché compare l’avviso</h2>
       <p>Il banner è un avviso informativo e non serve ad autorizzare profilazione o tracciamento. Selezionando “Accetta” viene registrata soltanto la preferenza tecnica descritta sopra e non viene attivato alcun servizio ulteriore. Se in futuro verranno introdotti analytics, pubblicità, mappe, video incorporati o altri servizi non tecnici, saranno effettuati una nuova verifica e l’eventuale blocco preventivo prima della loro attivazione.</p>
@@ -142,14 +147,15 @@
       <ul class="site-footer__list">
 <li><a href="../dojo/">Il Dojo</a></li><li><a href="../aikido/">Aikido</a></li><li><a href="../karate/">Karate</a></li><li><a href="../judo/">Judo</a></li><li><a href="../cqc-pencak-silat-kali-escrima/">CQC / Pencak Silat / Kali Escrima</a></li>      </ul>
     </nav>
-    <nav aria-labelledby="footer-centro">
-      <h2 class="site-footer__title site-footer__title--centro" id="footer-centro">Centro</h2>
+    <nav aria-labelledby="footer-studio">
+      <h2 class="site-footer__title site-footer__title--studio" id="footer-studio">Studio</h2>
       <ul class="site-footer__list">
-<li><a href="../centro/">Il Centro</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../pilates/">Pilates</a></li>      </ul>
+<li><a href="../studio/">Lo Studio</a></li><li><a href="../yoga/">Yoga</a></li><li><a href="../pilates/">Pilates</a></li>      </ul>
     </nav>
     <nav aria-labelledby="footer-pranavia">
       <h2 class="site-footer__title site-footer__title--pranavia" id="footer-pranavia">Pranavia</h2>
       <ul class="site-footer__list">
+        <li><a href="../calendario/">Calendario</a></li>
         <li><a href="../spazi/">Spazi</a></li>
         <li><a href="../contatti/">Contatti</a></li>
         <li><a href="../safeguarding/">Safeguarding</a></li>
@@ -177,6 +183,8 @@
 <script src="../assets/js/navigation.js" defer></script>
 <script src="../assets/js/reveal.js" defer></script>
 
+<script src="../assets/js/dati-foglio.js" defer></script>
+<script src="../assets/js/orari.js" defer></script>
 <script src="../assets/js/privacy-notice.js" defer></script>
 </body>
 </html>

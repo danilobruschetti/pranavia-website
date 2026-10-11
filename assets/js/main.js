@@ -36,7 +36,7 @@
   }
 })();
 
-/* v012 — threshold bar: underline the place (01 Dojo / 02 Centro) currently on screen. */
+/* v012 — threshold bar: underline the place (01 Dojo / 02 Studio) currently on screen. */
 (function () {
   'use strict';
   var links = document.querySelectorAll('[data-threshold] a[href^="#"]');
