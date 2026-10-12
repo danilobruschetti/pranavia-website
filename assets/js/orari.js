@@ -237,8 +237,9 @@
     var places = {};
     var slugs = {};
     rows.forEach(function (l) { if (l.ambito) places[l.ambito] = true; if (l.slug) slugs[l.slug] = true; });
-    ['dojo', 'studio'].forEach(function (p) { if (places[p]) out.push({ key: p, label: Dati.PLACES[p].label, place: p }); });
     Dati.DISCIPLINES.forEach(function (d) { if (slugs[d.slug]) out.push({ key: d.slug, label: d.short }); });
+    /* the groups come last: first the single disciplines, then Dojo and Studio */
+    ['dojo', 'studio'].forEach(function (p) { if (places[p]) out.push({ key: p, label: Dati.PLACES[p].label, place: p }); });
     return out;
   }
 

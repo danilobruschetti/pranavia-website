@@ -71,8 +71,7 @@
     { slug: 'yoga', label: 'Yoga', short: 'Yoga', ambito: 'studio', motif: 'lotus',
       aliases: { 'yoga': '', 'hatha yoga': 'Hatha Yoga' } },
     { slug: 'pilates', label: 'Pilates', short: 'Pilates', ambito: 'studio', motif: 'waves',
-      aliases: { 'pilates': '', 'pilates matwork': 'Pilates Matwork', 'matwork': 'Pilates Matwork', 'mat pilates': 'Pilates Matwork', 'barre pilates': 'Barre Pilates', 'pilates suspension': 'Pilates Suspension',
-        'pilates in gravidanza': 'Pilates in gravidanza', 'pilates gravidanza': 'Pilates in gravidanza' } }
+      aliases: { 'pilates': '', 'pilates matwork': 'Pilates Matwork', 'matwork': 'Pilates Matwork', 'mat pilates': 'Pilates Matwork', 'pilates suspension': 'Pilates Suspension' } }
   ];
 
   /* ==========================================================================
