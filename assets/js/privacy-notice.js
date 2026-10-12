@@ -34,7 +34,7 @@
         '<a href="' + privacyUrl + '">Privacy Policy</a> · ' +
         '<a href="' + cookiePolicyUrl + '">Cookie Policy</a></p>' +
       '</div>' +
-      '<button class="btn btn--light privacy-notice__accept" type="button">Accetta</button>' +
+      '<button class="btn btn--primary privacy-notice__accept" type="button">Accetta</button>' +
     '</div>';
 
   notice.querySelector('.privacy-notice__accept').addEventListener('click', function () {
