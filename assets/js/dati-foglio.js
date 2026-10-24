@@ -52,7 +52,7 @@
 
   var PLACES = {
     dojo: { slug: 'dojo', label: 'Dojo', of: 'del Dojo', hint: 'Arti marziali' },
-    studio: { slug: 'studio', label: 'Studio', of: 'dello Studio', hint: 'Yoga e Pilates' }
+    studio: { slug: 'studio', label: 'Centro', of: 'del Centro', hint: 'Yoga e Pilates' }
   };
 
   /* The six disciplines of the site. "aliases" are what people may type in the sheet (compared without capital
