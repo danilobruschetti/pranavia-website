@@ -874,6 +874,25 @@ html.lb-open { overflow: hidden; }
 .notice-bar__close svg { width: 1.05rem; height: 1.05rem; }
 .notice-bar :focus-visible { outline-color: var(--color-text-on-dark); }
 
+/* v014 — event strip of the home page: the same bar on paper, with the date tile of the calendar events (.event__date) */
+.notice-bar--event .notice-bar__item { background-color: var(--color-bg-paper); color: var(--color-text); border-bottom: 1px solid var(--color-border); }
+.notice-bar__date { flex: none; display: grid; justify-items: center; align-content: center; min-width: 2.85rem; padding: 0.3rem 0.35rem 0.1rem; border-top: 2px solid var(--color-brand-teal); line-height: 1; }
+.notice-bar__day { font-family: var(--font-display); font-size: 1.5rem; font-variant-numeric: lining-nums; }
+.notice-bar__month { margin-top: 0.15rem; font-size: 0.625rem; font-weight: 700; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-brand-teal-deep); }
+.notice-bar--event .notice-bar__text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.1rem 0.75rem; font-weight: 400; }
+.notice-bar__kicker { font-size: var(--fs-label); font-weight: 700; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--color-brand-teal-deep); }
+.notice-bar__title { font-family: var(--font-display); font-size: 1.125rem; line-height: 1.3; }
+.notice-bar__when { color: var(--color-text-muted); }
+.notice-bar--event .notice-bar__link { border-color: var(--color-border-strong); color: var(--color-ink-green); }
+.notice-bar--event .notice-bar__link:hover { background: var(--color-ink-green); border-color: var(--color-ink-green); color: var(--color-text-on-dark); }
+.notice-bar--event .notice-bar__more, .notice-bar--event .notice-bar__more:hover { color: var(--color-ink-green); }
+.notice-bar--event .notice-bar__close { color: var(--color-text); }
+.notice-bar--event .notice-bar__close:hover { background: var(--color-bg-soft); }
+.notice-bar--event :focus-visible { outline-color: var(--color-focus); }
+@media (max-width: 47.99em) {
+  .notice-bar--event .notice-bar__inner { align-items: flex-start; }    /* text on several lines: date and close sit at the top */
+}
+
 .callouts { display: grid; gap: var(--space-3); margin-bottom: var(--space-6); }
 .callout {
   display: grid;

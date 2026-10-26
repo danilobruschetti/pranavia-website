@@ -333,7 +333,7 @@
     eventi: {
       required: ['titolo', 'dal'],
       columns: {
-        attivo: ['attivo', 'visibile'], dal: ['dal', 'da', 'data', 'dalla_data'], al: ['al', 'fino_al', 'alla_data'],
+        attivo: ['attivo', 'visibile'], home: ['home', 'in_home', 'homepage'], dal: ['dal', 'da', 'data', 'dalla_data'], al: ['al', 'fino_al', 'alla_data'],
         titolo: ['titolo', 'evento'], dettagli: ['dettagli', 'dettaglio', 'descrizione'], link: ['link', 'url', 'collegamento']
       }
     }
@@ -439,7 +439,9 @@
     var win = readWindow(r, w);
     if (win.error) return win;
     if (!win.attivo) return { hidden: true };
-    return { value: { titolo: titolo, dal: win.dal, al: win.al, dettagli: cleanText(r.dettagli, 200), link: readLink(r, w) }, warnings: w };
+    var home = parseBool(r.home, false);                              /* empty = no: the event stays in the calendar page only */
+    if (home.invalid) w.push('“home” non riconosciuto (“' + cleanText(r.home, 16) + '”): scrivi si oppure no');
+    return { value: { titolo: titolo, home: home.value, dal: win.dal, al: win.al, dettagli: cleanText(r.dettagli, 200), link: readLink(r, w) }, warnings: w };
   }
 
   var NORMALIZERS = { orari: normalizeLesson, avvisi: normalizeNotice, eventi: normalizeEvent };
@@ -602,6 +604,11 @@
       .sort(function (a, b) { return a.e.dal - b.e.dal || a.i - b.i; })
       .map(function (x) { return x.e; })
       .slice(0, limit || 6);
+  }
+
+  /* the events that also go in the strip of the home page (column "home" = si): not finished yet, soonest first */
+  function homeEvents(events, now) {
+    return upcomingEvents(events, now, events.length).filter(function (e) { return e.home; });
   }
 
   /* "Sabato 24 ottobre", "24–26 ottobre", "28 ottobre – 2 novembre"; the year only when it is not the current one */
@@ -875,6 +882,7 @@
     activeNotices: activeNotices,
     homeNotices: homeNotices,
     upcomingEvents: upcomingEvents,
+    homeEvents: homeEvents,
     formatRange: formatRange,
     findOverlaps: findOverlaps,
     hash: hash

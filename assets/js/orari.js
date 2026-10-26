@@ -175,6 +175,80 @@
     bar.classList.add('is-open');
   }
 
+  /* v014 — the event strip of the home page: the next event marked "home" in the sheet, right under the notice strip.
+     Same bar, same opening and closing as the notices; on paper, with the date of the event as in the calendar page. */
+  function eventId(e) { return Dati.hash(e.titolo + '|' + e.dal + '|' + e.al); }
+  function eventDismissed(e) {
+    try { return window.sessionStorage.getItem('pranavia:evento:' + eventId(e)) === '1'; } catch (x) { return false; }
+  }
+  function dismissEvent(e) {
+    try { window.sessionStorage.setItem('pranavia:evento:' + eventId(e), '1'); } catch (x) { /* ignore */ }
+  }
+
+  var eventBarSignature = '';
+  function renderEventBar(now) {
+    var main = document.getElementById('contenuto') || document.querySelector('main');
+    if (!main || !main.hasAttribute('data-avviso-home')) return;         /* the strip exists on the home page only */
+    var rows = store.eventi && store.eventi.state === 'ok' ? store.eventi.rows : [];
+    var all = Dati.homeEvents(rows, now).filter(function (e) { return !eventDismissed(e); });
+    var e = all[0];
+    var extra = all.length - 1;
+    var live = !!e && e.dal < now.key;
+    var sig = (e ? eventId(e) + '|' + (e.link ? e.link.value : '') + '|' + live + '|' + now.y : '') + '+' + extra;
+    if (sig === eventBarSignature) return;
+    eventBarSignature = sig;
+    var old = document.querySelector('[data-event-bar]');
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    if (!e) return;
+
+    var p = Dati.keyParts(e.dal);
+    var bar = h('div', 'notice-bar notice-bar--event');
+    bar.setAttribute('data-event-bar', '');
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Eventi');
+    var clip = h('div', 'notice-bar__clip');
+    var item = h('div', 'notice-bar__item');
+    var inner = h('div', 'container--wide notice-bar__inner');
+    var date = h('span', 'notice-bar__date');                            /* the full date is in the text: the tile is decoration */
+    date.setAttribute('aria-hidden', 'true');
+    add(date, h('span', 'notice-bar__day', String(p.d)), h('span', 'notice-bar__month', Dati.MONTHS[p.m - 1].slice(0, 3)));
+    var body = h('div', 'notice-bar__body');
+    var text = h('p', 'notice-bar__text');
+    add(text, h('span', 'notice-bar__kicker', live ? 'In corso' : 'Evento'), h('span', 'notice-bar__title', e.titolo),
+      h('span', 'notice-bar__when', Dati.formatRange(e.dal, e.al, now.y)));
+    add(body, text);
+    var actions = h('div', 'notice-bar__actions');
+    if (e.link) add(actions, linkNode(e.link, 'notice-bar__link'));
+    else {
+      var go = h('a', 'notice-bar__link', 'Dettagli ');
+      go.href = href('calendario/#eventi');
+      add(actions, add(go, svg('arrow-right')));
+    }
+    if (extra > 0) {
+      var more = h('a', 'notice-bar__more', 'Altri ' + extra + (extra === 1 ? ' evento' : ' eventi'));
+      more.href = href('calendario/#eventi');
+      add(actions, more);
+    }
+    add(body, actions);
+    var close = h('button', 'notice-bar__close');
+    close.type = 'button';
+    close.setAttribute('aria-label', 'Chiudi l’evento');
+    close.appendChild(svg('close'));
+    close.addEventListener('click', function () {
+      all.forEach(dismissEvent);                                         /* closing the strip hides these events for the rest of the visit */
+      bar.classList.remove('is-open');
+      window.setTimeout(function () { if (bar.parentNode) bar.parentNode.removeChild(bar); }, 450);
+    });
+    add(inner, date, body, close);
+    add(item, inner);
+    add(clip, item);
+    add(bar, clip);
+    var notice = document.querySelector('[data-notice-bar]');
+    main.insertBefore(bar, notice && notice.parentNode === main ? notice.nextSibling : main.firstChild);
+    void bar.offsetHeight;                                               /* draw the closed state first, then slide open */
+    bar.classList.add('is-open');
+  }
+
   function renderCalloutLists(now) {
     qa('[data-avvisi]').forEach(function (box) {
       var list = Dati.activeNotices(notices(), now);
@@ -444,6 +518,7 @@
     renderedDay = now.key;
 
     renderNoticeBar(now);
+    renderEventBar(now);
     renderCalloutLists(now);
     renderEvents(now);
 
@@ -492,7 +567,7 @@
     }
     var wanted = ['avvisi'];                                          /* the notice bar is on every page */
     if (qa('[data-orari]').length) wanted.push('orari');
-    if (qa('[data-eventi]').length) wanted.push('eventi');
+    if (qa('[data-eventi], main[data-avviso-home]').length) wanted.push('eventi');   /* the calendar page, and the event strip of the home */
 
     /* The sheet is read again every time a page opens. After that the page stays up to date by itself: it checks again
        every couple of minutes while it is on screen, and as soon as the visitor comes back to the tab. */
