@@ -232,12 +232,35 @@
   }
 
   /* ---------------------------------------------------------------- weekly calendar */
+  /* the course of a discipline that has its own filter (Pilates Matwork / Pilates Suspension), or '' */
+  function variantOf(l) {
+    var d = l.slug ? Dati.disciplineBySlug(l.slug) : null;
+    if (!d || !d.variants) return '';
+    var text = Dati.fold(l.corso + ' ' + l.dettagli);
+    for (var i = 0; i < d.variants.length; i++) if (text.indexOf(d.variants[i].match) !== -1) return d.variants[i].key;
+    return '';
+  }
+
   function filterList(rows) {
     var out = [{ key: 'tutte', label: 'Tutte' }];
     var places = {};
     var slugs = {};
-    rows.forEach(function (l) { if (l.ambito) places[l.ambito] = true; if (l.slug) slugs[l.slug] = true; });
-    Dati.DISCIPLINES.forEach(function (d) { if (slugs[d.slug]) out.push({ key: d.slug, label: d.short }); });
+    var variants = {};
+    var plain = {};
+    rows.forEach(function (l) {
+      if (l.ambito) places[l.ambito] = true;
+      if (l.slug) slugs[l.slug] = true;
+      var v = variantOf(l);
+      if (v) variants[v] = true; else if (l.slug) plain[l.slug] = true;
+    });
+    /* a discipline with two or more of its courses in the week gets one filter per course; the filter of the whole
+       discipline stays only for its lessons that belong to none of them */
+    Dati.DISCIPLINES.forEach(function (d) {
+      if (!slugs[d.slug]) return;
+      var found = (d.variants || []).filter(function (v) { return variants[v.key]; });
+      if (found.length < 2 || plain[d.slug]) out.push({ key: d.slug, label: d.short });
+      if (found.length >= 2) found.forEach(function (v) { out.push({ key: v.key, label: v.label }); });
+    });
     /* the groups come last: first the single disciplines, then Dojo and Studio */
     ['dojo', 'studio'].forEach(function (p) { if (places[p]) out.push({ key: p, label: Dati.PLACES[p].label, place: p }); });
     return out;
@@ -250,6 +273,7 @@
     li.setAttribute('data-end', String(l.end));
     li.setAttribute('data-slug', l.slug || '');
     li.setAttribute('data-ambito', l.ambito || '');
+    li.setAttribute('data-variante', variantOf(l));
     var name = h('p', 'lesson__name');
     if (l.slug) { var a = h('a', null, l.titleShort); a.href = href(l.slug + '/'); add(name, a); } else { name.textContent = l.titleShort; }
     add(li, timeNode(l, 'lesson__time'), name);
@@ -270,7 +294,8 @@
     var f = ui.filter;
     var total = 0;
     qa('.lesson', block).forEach(function (li) {
-      var match = f === 'tutte' || li.getAttribute('data-ambito') === f || li.getAttribute('data-slug') === f;
+      var match = f === 'tutte' || li.getAttribute('data-ambito') === f || li.getAttribute('data-slug') === f ||
+        li.getAttribute('data-variante') === f;
       li.hidden = !match;
       if (match) total++;
     });

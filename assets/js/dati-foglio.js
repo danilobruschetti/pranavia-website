@@ -71,7 +71,10 @@
     { slug: 'yoga', label: 'Yoga', short: 'Yoga', ambito: 'studio', motif: 'lotus',
       aliases: { 'yoga': '', 'hatha yoga': 'Hatha Yoga' } },
     { slug: 'pilates', label: 'Pilates', short: 'Pilates', ambito: 'studio', motif: 'waves',
-      aliases: { 'pilates': '', 'pilates matwork': 'Pilates Matwork', 'matwork': 'Pilates Matwork', 'mat pilates': 'Pilates Matwork', 'pilates suspension': 'Pilates Suspension' } }
+      aliases: { 'pilates': '', 'pilates matwork': 'Pilates Matwork', 'matwork': 'Pilates Matwork', 'mat pilates': 'Pilates Matwork', 'pilates suspension': 'Pilates Suspension' },
+      /* courses with their own filter in the weekly calendar, recognised in the course name or in "dettagli" */
+      variants: [{ key: 'pilates-matwork', label: 'Pilates Matwork', match: 'matwork' },
+        { key: 'pilates-suspension', label: 'Pilates Suspension', match: 'suspension' }] }
   ];
 
   /* ==========================================================================
